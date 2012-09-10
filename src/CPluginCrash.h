@@ -38,7 +38,7 @@ namespace CrashPlugin
             ~CPluginCrash();
 
             // IPluginBase
-            void Release();
+            bool Release( bool bForce );
 
             int GetInitializationMode() const
             {
@@ -48,6 +48,7 @@ namespace CrashPlugin
             bool Check( const char* sAPIVersion ) const;
 
             bool Init( SSystemGlobalEnvironment& env, SSystemInitParams& startupParams, IPluginBase* pPluginManager );
+            bool InitDependencies();
 
             const char* GetVersion() const
             {

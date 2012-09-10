@@ -27,46 +27,67 @@ namespace CrashPlugin
         gPlugin = NULL;
     }
 
-    void CPluginCrash::Release()
+    bool CPluginCrash::Release( bool bForce )
     {
         // Should be called while Game is still active otherwise there might be leaks/problems
-        CPluginBase::Release();
+        bool bRet = CPluginBase::Release( bForce );
 
-        // Depending on your plugin you might not want to unregister anything
-        // if the System is quitting.
-        // if(gEnv && gEnv->pSystem && !gEnv->pSystem->IsQuitting()) {
-
-        // Unregister CVars
-        if ( gEnv && gEnv->pConsole )
+        if ( bRet )
         {
-            gEnv->pConsole->RemoveCommand( "pc_crash" );
+            // Depending on your plugin you might not want to unregister anything
+            // if the System is quitting.
+            // if(gEnv && gEnv->pSystem && !gEnv->pSystem->IsQuitting()) {
+
+            // Unregister CVars
+            if ( gEnv && gEnv->pConsole )
+            {
+                gEnv->pConsole->RemoveCommand( "pc_crash" );
+            }
+
+            // Unregister game objects
+            if ( gEnv && gEnv->pGameFramework )
+            {
+                // ...
+            }
+
+            // Cleanup like this always (since the class is static its cleaned up when the dll is unloaded)
+            gPluginManager->UnloadPlugin( GetName() );
+            m_bCanUnload = true;
         }
 
-        // Unregister game objects
-        if ( gEnv && gEnv->pGameFramework )
-        {
-            // ...
-        }
-
-        // Cleanup like this always (since the class is static its cleaned up when the dll is unloaded)
-        gPluginManager->UnloadPlugin( GetName() );
+        return bRet;
     };
 
     bool CPluginCrash::Init( SSystemGlobalEnvironment& env, SSystemInitParams& startupParams, IPluginBase* pPluginManager )
     {
         gPluginManager = ( PluginManager::IPluginManager* )pPluginManager->GetConcreteInterface( NULL );
-        CPluginBase::Init( env, startupParams, pPluginManager );
+        bool bRet = CPluginBase::Init( env, startupParams, pPluginManager );
 
-        // Register CVars
-        if ( gEnv && gEnv->pConsole )
+        if ( bRet )
         {
-            gEnv->pConsole->AddCommand( "pc_crash", Command_Crash, VF_NULL, "Crash the process" );
+            // ... Do initializations needed by other plugins
         }
 
-        // Register Game Objects
-        // ...
+        return bRet;
+    }
 
-        return true;
+    bool CPluginCrash::InitDependencies()
+    {
+        bool bRet = CPluginBase::InitDependencies(  );
+
+        if ( bRet )
+        {
+            // Register CVars
+            if ( gEnv && gEnv->pConsole )
+            {
+                gEnv->pConsole->AddCommand( "pc_crash", Command_Crash, VF_NULL, "Crash the process" );
+            }
+
+            // Register Game Objects
+            // ...
+        }
+
+        return bRet;
     }
 
     const char* CPluginCrash::ListCVars() const

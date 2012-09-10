@@ -9,6 +9,11 @@ Extraction
 ==========
 Extract the files to your Cryengine SDK Folder so that the Code and BinXX/Plugins directory match up.
 
+CVars
+=====
+* ```pc_crash```
+  Crashes the process
+
 Flownodes
 =========
 Adds a new Flownode Crash_Plugin:Crash that will crash the game when triggered.
