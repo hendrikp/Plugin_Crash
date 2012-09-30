@@ -102,7 +102,7 @@ namespace CrashPlugin
             return false;
         }
 
-        if ( strcmp( sAPIVersion, "3.4" ) == 0 )
+        if ( SFileVersion( sAPIVersion ) == SFileVersion( "3.4.0" ) )
         {
             return true;
         }
