@@ -42,7 +42,9 @@ namespace CrashPlugin
 
             // Cleanup like this always (since the class is static its cleaned up when the dll is unloaded)
             gPluginManager->UnloadPlugin( GetName() );
-            m_bCanUnload = true;
+
+            // Allow Plugin Manager garbage collector to unload this plugin
+            AllowDllUnload();
         }
 
         return bRet;
