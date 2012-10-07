@@ -34,20 +34,10 @@ namespace CrashPlugin
 
         if ( bRet )
         {
-            // Depending on your plugin you might not want to unregister anything
-            // if the System is quitting.
-            // if(gEnv && gEnv->pSystem && !gEnv->pSystem->IsQuitting()) {
-
             // Unregister CVars
             if ( gEnv && gEnv->pConsole )
             {
                 gEnv->pConsole->RemoveCommand( "pc_crash" );
-            }
-
-            // Unregister game objects
-            if ( gEnv && gEnv->pGameFramework )
-            {
-                // ...
             }
 
             // Cleanup like this always (since the class is static its cleaned up when the dll is unloaded)
@@ -58,15 +48,10 @@ namespace CrashPlugin
         return bRet;
     };
 
-    bool CPluginCrash::Init( SSystemGlobalEnvironment& env, SSystemInitParams& startupParams, IPluginBase* pPluginManager )
+    bool CPluginCrash::Init( SSystemGlobalEnvironment& env, SSystemInitParams& startupParams, IPluginBase* pPluginManager, const char* sPluginDirectory )
     {
         gPluginManager = ( PluginManager::IPluginManager* )pPluginManager->GetConcreteInterface( NULL );
-        bool bRet = CPluginBase::Init( env, startupParams, pPluginManager );
-
-        if ( bRet )
-        {
-            // ... Do initializations needed by other plugins
-        }
+        bool bRet = CPluginBase::Init( env, startupParams, pPluginManager, sPluginDirectory );
 
         return bRet;
     }
@@ -82,9 +67,6 @@ namespace CrashPlugin
             {
                 gEnv->pConsole->AddCommand( "pc_crash", Command_Crash, VF_NULL, "Crash the process" );
             }
-
-            // Register Game Objects
-            // ...
         }
 
         return bRet;

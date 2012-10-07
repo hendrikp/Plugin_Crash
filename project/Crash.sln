@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Crash", "Crash.vcxproj", "{90193419-7421-4233-BEBD-148D6566622B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Crash", "Crash.vcxproj", "{45632477-D4BB-4A9B-ACC7-0A0CF4E9E552}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +11,14 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{90193419-7421-4233-BEBD-148D6566622B}.Debug|Win32.ActiveCfg = Debug|Win32
-		{90193419-7421-4233-BEBD-148D6566622B}.Debug|Win32.Build.0 = Debug|Win32
-		{90193419-7421-4233-BEBD-148D6566622B}.Debug|x64.ActiveCfg = Debug|x64
-		{90193419-7421-4233-BEBD-148D6566622B}.Debug|x64.Build.0 = Debug|x64
-		{90193419-7421-4233-BEBD-148D6566622B}.Release|Win32.ActiveCfg = Release|Win32
-		{90193419-7421-4233-BEBD-148D6566622B}.Release|Win32.Build.0 = Release|Win32
-		{90193419-7421-4233-BEBD-148D6566622B}.Release|x64.ActiveCfg = Release|x64
-		{90193419-7421-4233-BEBD-148D6566622B}.Release|x64.Build.0 = Release|x64
+		{45632477-D4BB-4A9B-ACC7-0A0CF4E9E552}.Debug|Win32.ActiveCfg = Debug|Win32
+		{45632477-D4BB-4A9B-ACC7-0A0CF4E9E552}.Debug|Win32.Build.0 = Debug|Win32
+		{45632477-D4BB-4A9B-ACC7-0A0CF4E9E552}.Debug|x64.ActiveCfg = Debug|x64
+		{45632477-D4BB-4A9B-ACC7-0A0CF4E9E552}.Debug|x64.Build.0 = Debug|x64
+		{45632477-D4BB-4A9B-ACC7-0A0CF4E9E552}.Release|Win32.ActiveCfg = Release|Win32
+		{45632477-D4BB-4A9B-ACC7-0A0CF4E9E552}.Release|Win32.Build.0 = Release|Win32
+		{45632477-D4BB-4A9B-ACC7-0A0CF4E9E552}.Release|x64.ActiveCfg = Release|x64
+		{45632477-D4BB-4A9B-ACC7-0A0CF4E9E552}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

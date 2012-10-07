@@ -47,7 +47,7 @@ namespace CrashPlugin
 
             bool Check( const char* sAPIVersion ) const;
 
-            bool Init( SSystemGlobalEnvironment& env, SSystemInitParams& startupParams, IPluginBase* pPluginManager );
+            bool Init( SSystemGlobalEnvironment& env, SSystemInitParams& startupParams, IPluginBase* pPluginManager, const char* sPluginDirectory );
             bool InitDependencies();
 
             const char* GetVersion() const
