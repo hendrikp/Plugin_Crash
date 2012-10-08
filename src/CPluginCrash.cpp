@@ -3,6 +3,8 @@
 #include <StdAfx.h>
 #include <CPluginCrash.h>
 
+#define COMMAND_CRASH "pc_crash"
+
 namespace CrashPlugin
 {
     CPluginCrash* gPlugin = NULL;
@@ -37,7 +39,7 @@ namespace CrashPlugin
             // Unregister CVars
             if ( gEnv && gEnv->pConsole )
             {
-                gEnv->pConsole->RemoveCommand( "pc_crash" );
+                gEnv->pConsole->RemoveCommand( COMMAND_CRASH );
             }
 
             // Cleanup like this always (since the class is static its cleaned up when the dll is unloaded)
@@ -67,7 +69,7 @@ namespace CrashPlugin
             // Register CVars
             if ( gEnv && gEnv->pConsole )
             {
-                gEnv->pConsole->AddCommand( "pc_crash", Command_Crash, VF_NULL, "Crash the process" );
+                gEnv->pConsole->AddCommand( COMMAND_CRASH, Command_Crash, VF_NULL, "Crash the process" );
             }
         }
 
@@ -76,22 +78,7 @@ namespace CrashPlugin
 
     const char* CPluginCrash::ListCVars() const
     {
-        return "pc_crash,\n";
-    }
-
-    bool CPluginCrash::Check( const char* sAPIVersion ) const
-    {
-        if ( !sAPIVersion )
-        {
-            return false;
-        }
-
-        if ( SFileVersion( sAPIVersion ) == SFileVersion( "3.4.0" ) )
-        {
-            return true;
-        }
-
-        return false;
+        return COMMAND_CRASH ",\n";
     }
 
     const char* CPluginCrash::GetStatus() const

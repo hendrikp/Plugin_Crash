@@ -45,14 +45,12 @@ namespace CrashPlugin
                 return int( PluginManager::IM_Default );
             };
 
-            bool Check( const char* sAPIVersion ) const;
-
             bool Init( SSystemGlobalEnvironment& env, SSystemInitParams& startupParams, IPluginBase* pPluginManager, const char* sPluginDirectory );
             bool InitDependencies();
 
             const char* GetVersion() const
             {
-                return "1.0";
+                return "1.0.0.0";
             };
 
             const char* GetName() const
@@ -67,7 +65,7 @@ namespace CrashPlugin
 
             const char* ListAuthors() const
             {
-                return "Hendrik \"hendrikp\" Polczynski";
+                return "Hendrik Polczynski";
             };
 
             const char* ListCVars() const;
