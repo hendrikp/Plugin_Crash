@@ -70,22 +70,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectDir)..\..\..\Bin32\Plugins</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\Bin32\Plugins\$(ProjectName)\</OutDir>
     <TargetName>Plugin_$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectDir)..\..\..\Bin32\Plugins</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\Bin32\Plugins\$(ProjectName)\</OutDir>
     <TargetName>Plugin_$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectDir)..\..\..\Bin64\Plugins</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\Bin64\Plugins\$(ProjectName)\</OutDir>
     <TargetName>Plugin_$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectDir)..\..\..\Bin64\Plugins</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\Bin64\Plugins\$(ProjectName)\</OutDir>
     <TargetName>Plugin_$(ProjectName)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
