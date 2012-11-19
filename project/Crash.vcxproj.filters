@@ -41,6 +41,14 @@
     <None Include="..\tools\stylecode.bat">
       <Filter>Tools</Filter>
     </None>
+    <None Include="..\latestredist.info" />
+    <None Include="..\tools\Crash_Installer.nsi">
+      <Filter>Installer</Filter>
+    </None>
+    <None Include="..\tools\build_installer.bat">
+      <Filter>Installer</Filter>
+    </None>
+    <None Include="..\changelog.md" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -57,6 +65,9 @@
     </Filter>
     <Filter Include="Tools">
       <UniqueIdentifier>{4a46776a-27ef-489c-8e23-5cf4379ce9a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Installer">
+      <UniqueIdentifier>{e9debed9-311d-444e-8c77-4e67257a5852}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

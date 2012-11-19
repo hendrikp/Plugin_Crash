@@ -1,9 +1,6 @@
 Crash Plugin for Plugin SDK
 ===========================
-Tested on CryEngine 3 FreeSDK Version 3.4 (32/64 Bit)
-
-Purpose is to create a way to reliable crash the process.
-For redistribution please see license.txt.
+Purpose is to supply a sample plugin that creates a way to reliable crash the process.
 
 Extraction
 ==========
