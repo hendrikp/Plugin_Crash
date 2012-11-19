@@ -4,7 +4,7 @@ Purpose is to supply a sample plugin that creates a way to reliable crash the pr
 
 Extraction
 ==========
-Extract the files to your Cryengine SDK Folder so that the Code and BinXX/Plugins directory match up.
+Use the installer or Extract the files to your CryEngine SDK Folder so that the Code and BinXX/Plugins directory match up.
 
 CVars
 =====
