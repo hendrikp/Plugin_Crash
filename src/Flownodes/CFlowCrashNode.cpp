@@ -36,7 +36,7 @@ namespace CrashPlugin
                 static const SInputPortConfig inputs[] =
                 {
                     InputPortConfig_Void( "Crash", _HELP( "Crash Game" ) ),
-                    {0},
+                    InputPortConfig_Null(),
                 };
 
                 config.pInputPorts = inputs;
