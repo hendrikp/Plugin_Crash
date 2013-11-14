@@ -69,7 +69,7 @@ namespace CrashPlugin
 
     bool CPluginCrash::InitDependencies()
     {
-        bool bRet = CPluginBase::InitDependencies(  );
+        bool bRet = CPluginBase::InitDependencies( );
 
         if ( bRet )
         {

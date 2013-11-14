@@ -1,6 +1,6 @@
-Crash Plugin 1.2.2.0 (04.11.2013)
+Crash Plugin 1.2.2.0 (18.11.2013)
 ---------------------------
-Release for CryEngine 3.5.3 (32/64 bit)
+Release for CryEngine 3.5.4 (32/64 bit)
 
 Crash Plugin 1.2.1.0 (02.03.2013)
 ---------------------------
